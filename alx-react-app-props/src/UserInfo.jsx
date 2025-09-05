@@ -1,7 +1,7 @@
-import UserProfile from './components/UserProfile';
+import UserDetails from './components/UserDetails';
 
 function UserInfo() {
-  return <UserProfile />;
+  return <UserDetails />;
 }
 
 export default UserInfo;
