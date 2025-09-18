@@ -8,15 +8,15 @@ function AddRecipeForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const trimmedTitle = title.trim();
-    if (!trimmedTitle) return;
-    addRecipe({ id: Date.now(), title: trimmedTitle, description: description.trim() });
+    const t = title.trim();
+    if (!t) return;
+    addRecipe({ id: Date.now(), title: t, description: description.trim() });
     setTitle('');
     setDescription('');
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ margin: '20px', border: '1px solid #ddd', padding: '12px', borderRadius: '6px' }}>
+    <form onSubmit={handleSubmit} style={{ margin: '20px 0', border: '1px solid #ddd', padding: '12px', borderRadius: '6px' }}>
       <input
         value={title}
         onChange={(e) => setTitle(e.target.value)}
