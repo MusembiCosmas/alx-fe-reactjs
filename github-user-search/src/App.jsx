@@ -1,11 +1,11 @@
-import SearchBar from './components/SearchBar';
+import React from 'react';
+import Search from './components/Search';
 
 function App() {
   return (
-    <div style={{ maxWidth: 900, margin: '0 auto', padding: 20 }}>
+    <div style={{ maxWidth: '800px', margin: '0 auto', padding: '20px' }}>
       <h1 style={{ textAlign: 'center' }}>GitHub User Search</h1>
-      <p style={{ textAlign: 'center' }}>Type a username and press Search (uses axios via src/services/api.js)</p>
-      <SearchBar />
+      <Search />
     </div>
   );
 }
