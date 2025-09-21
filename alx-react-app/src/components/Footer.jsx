@@ -1,8 +1,11 @@
+import React from 'react';
+
 function Footer() {
   return (
-    <footer>
-      <p>© 2023 City Lovers</p>
+    <footer style={{ backgroundColor: '#222', color: '#fff', textAlign: 'center', padding: '12px', marginTop: '20px' }}>
+      <p style={{ margin: 0 }}>© {new Date().getFullYear()} My Company. All rights reserved.</p>
     </footer>
   );
 }
+
 export default Footer;
