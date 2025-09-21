@@ -1,10 +1,12 @@
-import axios from 'axios';
-
-export async function fetchUserData(username) {
+export async function fetchUser(username) {
   try {
-    const response = await axios.get(`https://api.github.com/users/${username}`);
-    return response.data;
+    const response = await fetch(\`https://api.github.com/users/\${username}\`);
+    if (!response.ok) {
+      throw new Error("User not found");
+    }
+    return await response.json();
   } catch (error) {
-    throw error;
+    console.error(error);
+    return null;
   }
 }
